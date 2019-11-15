@@ -96,9 +96,11 @@ body {
     body {
       padding: 0; } }
 
-@media only screen and (max-width: 37.5em) {
-  p {
-    font-size: 1.4rem; } }
+p {
+  font-size: 1.2rem; }
+  @media only screen and (max-width: 37.5em) {
+    p {
+      font-size: 1.4rem; } }
 
 .main {
   transition: .5s; }
@@ -191,6 +193,8 @@ body {
     max-width: 100%; }
   .navigation__logo {
     height: 6rem;
+    margin-bottom: 0;
+    padding: 1.2rem;
     -webkit-filter: invert(100);
     filter: invert(100); }
     .navigation__logo:hover {
@@ -412,7 +416,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/img/hero-background-redhead.jpg);
+  background: url(/img/hero-abstract-bg.jpg);
   min-height: 100vh;
   color: #fff;
   background-attachment: scroll;
@@ -437,7 +441,7 @@ body {
     font-weight: 400;
     color: #fff;
     text-align: center;
-    font-size: 9rem;
+    font-size: 11rem;
     padding-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -622,7 +626,7 @@ body {
         width: 100%; } }
   .about__header {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
       .about__header {
@@ -792,9 +796,9 @@ body {
     font-size: 29rem;
     margin-bottom: 1rem;
     position: absolute;
-    top: 17%;
+    top: 4%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     color: rgba(0, 0, 0, 0.1);
     z-index: -1; }
     @media only screen and (max-width: 75em) {
