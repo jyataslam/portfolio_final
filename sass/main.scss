@@ -1,0 +1,24 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+@import "/node_modules/magnify/dist/css/magnify.css";
+
+@import "components/navigation";
+@import "components/hero";
+@import "components/services";
+@import "components/photos";
+@import "components/parallax";
+@import "components/doctor";
+@import "components/request";
+@import "components/map";
+@import "components/art";
+@import "components/art_modal";
+@import "components/instagram";
+@import "components/profile";
+@import "components/blog";
+@import "components/footer";
+@import "components/contact";
