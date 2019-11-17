@@ -1,12 +1,12 @@
 .art {
-    padding: 70px 0 60px;
+    padding: 70px 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 
     @include respond(phone){
-        padding: 50px 0;
+        padding: 50px 0 0;
     }
 
     &__name {
@@ -37,7 +37,7 @@
 
     &__hr {
         padding-bottom: 3rem;
-        border-top: 2px solid $color-black;
+        border-top: 4px solid $color-black;
     }
 
     &__subheader {
