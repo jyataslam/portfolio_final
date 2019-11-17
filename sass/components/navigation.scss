@@ -40,7 +40,7 @@
         }
 
         @include respond(phone){
-            padding-left: 25px;
+            padding-left: 5px;
             padding-right: 25px;
         }
     }
@@ -74,6 +74,7 @@
         &__scrolled {
             -webkit-filter: invert(0);
             filter: invert(0);
+            padding: 1.4rem;
         }
 
         @include respond(tab-port){
@@ -83,6 +84,10 @@
         @include respond(tab-land){
             -webkit-filter: none;
             filter: none;
+        }
+
+        @include respond(phone){
+            padding: 1.4rem;
         }
     }
 
