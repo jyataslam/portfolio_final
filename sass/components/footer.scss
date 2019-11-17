@@ -1,6 +1,6 @@
 .footer {
     background-color: $color-background-dark;
-    padding: 5rem 0 2rem;
+    padding: 8rem 0 2rem;
     color: $color-white;
 
     &__logo--container {
@@ -11,14 +11,14 @@
 
     &__logo {
         margin: 0 auto;
-        height: 200px;
-
-        // Delete filter depending on initial logo color. If logo is white, keep filter.
-        -webkit-filter: invert(100);
-        filter: invert(100);
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 8rem;
+        transition: color .5s ease;
 
         &:hover {
             cursor: pointer;
+            color: $color-primary-blue;
         }
 
         @include respond(tab-port){
@@ -48,9 +48,15 @@
     &__location--wrapper {
         display: flex;
         flex-direction: row;
+        padding-bottom: 3rem;
+
+        &:nth-child(3){
+            padding-bottom: 0;
+        }
 
         @include respond(phone){
             justify-content: center;
+            padding-bottom: 2rem;
         }
     }
 

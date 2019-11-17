@@ -79,10 +79,10 @@ $(".work-link-sidenav").on("click", e => {
   $(".art").scrollView();
 });
 
-$(".social-link-sidenav").on("click", e => {
+$(".skills-link-sidenav").on("click", e => {
   e.preventDefault();
   handleNavAnimationClick();
-  $(".instagram").scrollView();
+  $(".skills").scrollView();
 });
 
 $(".contact-link-sidenav").on("click", e => {
@@ -101,9 +101,9 @@ $(".work-link, .hero__button, .about__btn--more").on("click", e => {
   $(".art").scrollView();
 });
 
-$(".social-link").on("click", e => {
+$(".skills-link").on("click", e => {
   e.preventDefault();
-  $("#instagram").scrollView();
+  $("#skills").scrollView();
 });
 
 $(".contact-link").on("click", e => {

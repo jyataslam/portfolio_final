@@ -486,127 +486,6 @@ body {
         border: 2px solid #fff;
         text-decoration: none; }
 
-.services {
-  padding: 30px 0 80px;
-  display: flex;
-  flex-direction: column; }
-  .services__title {
-    text-align: center; }
-  .services .row {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; }
-  .services__item {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 4rem; }
-    @media only screen and (max-width: 37.5em) {
-      .services__item {
-        width: 100%;
-        margin-bottom: 5rem; } }
-  .services__photo {
-    border-radius: 50%;
-    margin: auto;
-    height: 200px;
-    width: 200px;
-    object-fit: cover; }
-    @media only screen and (max-width: 56.25em) {
-      .services__photo {
-        height: 150px;
-        width: 150px; } }
-  .services__item-title {
-    padding-top: 2rem;
-    text-align: center;
-    color: #111; }
-  .services__text {
-    color: #666666;
-    padding-top: 1rem;
-    text-align: center; }
-    @media only screen and (max-width: 37.5em) {
-      .services__text {
-        padding-top: .5rem; } }
-  .services__btn {
-    color: #111;
-    border: 2px solid #111; }
-    .services__btn:hover {
-      cursor: pointer;
-      color: #fff;
-      background: #111; }
-    @media only screen and (max-width: 37.5em) {
-      .services__btn {
-        margin-top: 1rem; } }
-
-.photos {
-  position: relative;
-  padding-bottom: 60px; }
-  .photos .row {
-    padding: 0 4px; }
-    @media only screen and (max-width: 37.5em) {
-      .photos .row {
-        padding: 0 2px; } }
-  .photos__column {
-    flex: 25%;
-    max-width: 25%; }
-    @media only screen and (max-width: 56.25em) {
-      .photos__column {
-        flex: 50%;
-        max-width: 50%; } }
-  .photos__photo {
-    width: 100%;
-    padding: 4px; }
-    @media only screen and (max-width: 37.5em) {
-      .photos__photo {
-        padding: 2px; } }
-  .photos__gray--container {
-    position: absolute;
-    top: 0;
-    left: 0; }
-    .photos__gray--container .row {
-      padding: 0 4px; }
-      @media only screen and (max-width: 37.5em) {
-        .photos__gray--container .row {
-          padding: 0 2px; } }
-    .photos__gray--container__column {
-      flex: 25%;
-      max-width: 25%; }
-      @media only screen and (max-width: 56.25em) {
-        .photos__gray--container__column {
-          flex: 50%;
-          max-width: 50%; } }
-    .photos__gray--container__photo {
-      width: 100%;
-      padding: 4px;
-      opacity: 1;
-      transition: opacity 2s ease-in-out; }
-      @media only screen and (max-width: 37.5em) {
-        .photos__gray--container__photo {
-          padding: 2px; } }
-
-.o-fade {
-  opacity: 0; }
-
-.parallax {
-  min-height: 450px;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  @media only screen and (max-width: 37.5em) {
-    .parallax {
-      min-height: 350px; } }
-  .parallax__text {
-    font-size: 6rem;
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    text-align: left; }
-  .parallax__logo {
-    -webkit-filter: invert(100);
-    filter: invert(100);
-    height: 18rem; }
-
 .about {
   padding: 8rem 0 5rem;
   position: relative; }
@@ -700,90 +579,15 @@ body {
     right: 0;
     z-index: -1; }
 
-.request {
-  padding: 4rem 0;
-  background: url(/img/request-background.png);
-  background-size: cover;
-  background-position: center;
-  color: #111; }
-  @media only screen and (max-width: 37.5em) {
-    .request {
-      background-position: right; } }
-  .request__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; }
-    @media only screen and (max-width: 37.5em) {
-      .request__wrapper {
-        flex-direction: column; } }
-  .request__tagline {
-    font-family: 'Roboto Mono', sans-serif;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 0;
-    letter-spacing: 0; }
-    @media only screen and (max-width: 37.5em) {
-      .request__tagline {
-        margin: 0 auto 1.5rem;
-        font-size: 2.5rem; } }
-  .request__btn--consultation {
-    font-size: 1.6rem;
-    margin: inherit;
-    outline: none;
-    border: 2px solid #111;
-    color: #111; }
-    .request__btn--consultation:hover {
-      cursor: pointer;
-      text-decoration: none;
-      color: #111;
-      transform: scale(1.1); }
-
-.map {
-  height: 400px; }
-  @media only screen and (max-width: 37.5em) {
-    .map {
-      height: 300px; } }
-
-#mapMarker {
-  background-image: url(/img/map-marker.png);
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  cursor: pointer; }
-
-.mapboxgl-popup {
-  max-width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.mapboxgl-popup-content {
-  padding: 1rem 3rem;
-  color: #111;
-  font-weight: bold;
-  font-family: inherit;
-  text-align: center;
-  border-radius: 2rem;
-  color: #666666; }
-
-.mapboxgl-popup-close-button {
-  right: 1rem;
-  top: .5rem;
-  font-size: 1.5rem; }
-
-.mapboxgl-ctrl-bottom-right {
-  display: none; }
-
 .art {
-  padding: 70px 0 60px;
+  padding: 70px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .art {
-      padding: 50px 0; } }
+      padding: 50px 0 0; } }
   .art__name {
     font-size: 4rem;
     font-family: "Open Sans Condensed", sans-serif; }
@@ -804,7 +608,7 @@ body {
     color: #111; }
   .art__hr {
     padding-bottom: 3rem;
-    border-top: 2px solid #111; }
+    border-top: 4px solid #111; }
   .art__subheader {
     font-family: inherit;
     font-weight: 400;
@@ -858,128 +662,6 @@ body {
         border: 2px solid #111;
         text-decoration: none;
         color: #fff; }
-
-.modal-dialog {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: none !important; }
-
-.modal-content {
-  height: auto !important;
-  min-height: 100% !important;
-  border-radius: 0 !important;
-  background-color: #ececec !important;
-  border: none; }
-
-.art-close {
-  margin-right: 2rem;
-  font-size: 8rem;
-  color: #fff; }
-
-.modal-body {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #111; }
-
-.modal-image {
-  height: 100%;
-  margin: auto;
-  object-fit: contain;
-  max-width: 100%; }
-
-.art-modal-close {
-  z-index: 1; }
-
-.instagram {
-  padding: 16rem 0 100px;
-  color: #111;
-  position: relative; }
-  @media only screen and (max-width: 37.5em) {
-    .instagram {
-      padding: 80px 0 30px; } }
-  .instagram__container {
-    max-width: 93.5rem; }
-  .instagram__row {
-    justify-content: space-evenly; }
-  .instagram__header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 20rem;
-    text-align: center;
-    padding-bottom: .5rem;
-    font-weight: 700;
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(0, 0, 0, 0.1);
-    z-index: -1; }
-    @media only screen and (max-width: 37.5em) {
-      .instagram__header {
-        top: 10%;
-        font-size: 12rem; } }
-  .instagram__follow {
-    border: 1px solid transparent;
-    background-color: #3897f0;
-    border-radius: 4px;
-    padding: 5px 9px;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: .02rem;
-    margin: auto 2rem;
-    text-align: center; }
-    .instagram__follow:hover {
-      text-decoration: none;
-      color: #fff; }
-  .instagram__header--container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  .instagram__anchor {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .instagram__icon {
-    height: 5rem;
-    padding-left: 1rem;
-    transition: all .5s ease-in-out; }
-    .instagram__icon:hover {
-      transform: rotateX(180deg); }
-  .instagram__hr {
-    border-top: 3px solid #111;
-    padding-bottom: 0; }
-  .instagram__photo--container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; }
-  .instagram__photo {
-    height: 27rem;
-    width: 27rem;
-    margin: 10px 1px;
-    overflow: hidden;
-    background-color: #111; }
-    .instagram__photo:hover .instagram__fetched {
-      transform: scale(1.2);
-      opacity: .3; }
-    @media only screen and (max-width: 75em) {
-      .instagram__photo {
-        height: 200px;
-        width: 200px; } }
-    @media only screen and (max-width: 37.5em) {
-      .instagram__photo {
-        height: 150px;
-        width: 150px; } }
-  .instagram__fetched {
-    height: 100%;
-    transition: all .3s ease-in-out;
-    width: 100%;
-    object-fit: cover; }
 
 .profile {
   padding: 5rem 0; }
@@ -1222,113 +904,34 @@ Remove or comment-out the code block below to see how the browser will fall-back
     .profile-stats {
       margin: 0; } } }
 
-.blog {
-  padding: 16rem 0 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative; }
-  @media only screen and (max-width: 37.5em) {
-    .blog {
-      padding-top: 8rem; } }
-  .blog__hr {
-    padding-bottom: 3rem; }
-  .blog a {
-    text-decoration: none; }
-  .blog .row {
-    flex-direction: column; }
-  .blog__header {
+.skills {
+  padding: 60px 0 80px; }
+  .skills__title {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 29rem;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(0, 0, 0, 0.1);
-    z-index: -1; }
-    @media only screen and (max-width: 37.5em) {
-      .blog__header {
-        top: 7%; } }
-    .blog__header--text-main {
-      text-align: center;
-      margin: auto;
-      font-size: 2.2rem; }
-      @media only screen and (max-width: 75em) {
-        .blog__header--text-main {
-          padding-top: 7rem; } }
-      @media only screen and (max-width: 37.5em) {
-        .blog__header--text-main {
-          padding-top: 14rem; } }
-    .blog__header--text-sub {
-      text-align: center;
-      margin: auto;
-      font-size: 1.6rem;
-      font-weight: 100; }
-      .blog__header--text-sub a {
-        font-weight: 400;
-        color: #de2a45;
-        transition: all .2s; }
-        .blog__header--text-sub a:hover {
-          color: #de2a45; }
-  .blog__slider {
-    padding: 0;
+    font-size: 8rem;
+    color: #111; }
+  .skills__hr {
+    border-top: 4px solid #111; }
+  .skills__icon-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    list-style-type: none;
-    flex-wrap: wrap; }
-  .blog__post {
-    margin: 3rem 1rem;
-    width: 23%;
-    -webkit-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.4);
-    transition: all .3s ease-in-out; }
-    @media only screen and (max-width: 75em) {
-      .blog__post {
-        width: 44%; } }
+    margin-bottom: 2rem; }
     @media only screen and (max-width: 37.5em) {
-      .blog__post {
-        width: 100%; } }
-    .blog__post:hover {
-      transform: scale(1.03); }
-  .blog__topImg {
-    width: 100%;
-    height: 350px;
-    object-fit: cover; }
-    @media only screen and (max-width: 37.5em) {
-      .blog__topImg {
-        height: 250px; } }
-  .blog__content {
-    padding: 2rem; }
-  .blog__preview {
-    font-size: 0.95rem;
-    font-weight: 300; }
-  .blog__title {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-    margin-top: 0;
-    color: #111;
-    padding-bottom: 1rem;
-    text-align: center; }
-  .blog__intro {
-    line-height: 1.5;
-    color: #666666; }
-  .blog__info {
-    font-weight: 300;
-    color: #666666; }
-  .blog__author {
-    font-size: 0.9rem; }
-  .blog__date {
-    font-size: 0.85rem; }
+      .skills__icon-container {
+        width: 50%; } }
+    .skills__icon-container__icon {
+      text-align: center; }
+      .skills__icon-container__icon__svg {
+        height: 100px;
+        width: 100px; }
+      .skills__icon-container__icon__title {
+        text-align: center;
+        padding-top: 1rem; }
 
 .footer {
   background-color: #252525;
-  padding: 5rem 0 2rem;
+  padding: 8rem 0 2rem;
   color: #fff; }
   .footer__logo--container {
     display: flex;
@@ -1336,11 +939,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
     justify-content: space-evenly; }
   .footer__logo {
     margin: 0 auto;
-    height: 200px;
-    -webkit-filter: invert(100);
-    filter: invert(100); }
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 8rem;
+    transition: color .5s ease; }
     .footer__logo:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      color: #de2a45; }
     @media only screen and (max-width: 56.25em) {
       .footer__logo {
         height: 150px; } }
@@ -1359,10 +964,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
         padding-top: 3rem; } }
   .footer__location--wrapper {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    padding-bottom: 3rem; }
+    .footer__location--wrapper:nth-child(3) {
+      padding-bottom: 0; }
     @media only screen and (max-width: 37.5em) {
       .footer__location--wrapper {
-        justify-content: center; } }
+        justify-content: center;
+        padding-bottom: 2rem; } }
   .footer__icon {
     color: #de2a45;
     font-size: 3rem; }
