@@ -43,6 +43,7 @@
         color: $color-primary-blue;
         text-align: center;
         padding-bottom: 2rem;
+        font-size: 2rem;
 
         @include respond(phone){
             font-size: 2.4rem;

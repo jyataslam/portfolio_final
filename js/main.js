@@ -15,18 +15,6 @@ const modalTrigger = $("#exampleModalPreview");
 
 $(document).ready(function() {
   $("#hamburger").click(handleNavAnimationClick);
-
-  $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
-
-  fetchEtsy();
-  fetchInstagram();
-  fetchBlogPosts();
-
-  $(modalTrigger).on("show.bs.modal", e => {
-    let imageUrl = $(e.relatedTarget).attr("src");
-    let modalImage = $(".modal-image").attr("src", imageUrl);
-    $(modalBody).append(modalImage);
-  });
 });
 
 // Handle all scroll events
@@ -42,7 +30,7 @@ $(document).scroll(function() {
       $(socialIcon).removeClass("navigation__links-scrolled"),
       $(desktopNavWrapper).removeClass("navigation__wrapper__scrolled"),
       $(navLogo).removeClass("navigation__logo__scrolled"));
-  
+
   fadeInAnimation();
 });
 
@@ -123,71 +111,44 @@ $(".contact-link").on("click", e => {
   $("#footer").scrollView();
 });
 
-// Pull data to dynamically create art cards in Art section. This might be destroyed once Etsy API is integrated
+// Pull data to dynamically create art cards in Work section
 const data = [
   {
     id: 1,
-    pic: "/img/art/abstract2.jpg",
-    name: "Art Piece 1",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$100"
+    pic: "/img/ps-site.png",
+    name: "Pocket Statz",
+    description: `Pocket Statz is application that allows the user to quickly check the stats of their favorite NBA or NHL teams.<br><br>
+
+      Pocket Statz is built on a LAMP stack with a ReactJS Front-End. Redux is used in conjunction with ReactJS so that state can easily be shared and modified throughout multiple components of the application. React Router DOM was utilized to make Pocket Statz a single page application for a better user experience. Redux Forms is used so the users can create accounts and sign in while Materialize helped style the components.<br><br>
+      
+      The Back-End runs an Apache server and utilizes PHP to store and retrieve the user's team data to and from the MySQL database. PHP and MySQL is also handling validation and user authentication.`,
+    url: "https://pocketstatz.com",
+    price: "ReactJS, Redux, Javascript, HTML, SASS, PHP, MySQL"
   },
   {
     id: 2,
-    pic: "/img/art/abstract3.jpg",
-    name: "Art Piece 2",
+    pic: "/img/hd-site.png",
+    name: "Huntington Digital, LLC",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$300"
+      `Website carefully created and designed specifically for Huntington Digital, LLC.<br><br>
+      Huntington Digital was built utilizing vanilla Javascript for the Front-End and PHP for the Back-End running on an Apache server. My duties included UI/UX design, implementation of existing wireframe to code, custom animations, and deployment.`,
+    url: "https://www.huntingtondigitaloc.com",
+    price: "Javascript, HTML, CSS, PHP"
   },
   {
     id: 3,
-    pic: "/img/art/abstract4.jpg",
-    name: "Art Piece 3",
+    pic: "/img/hanna-site.png",
+    name: "Hanna Jennings Art",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$10200"
-  },
-  {
-    id: 4,
-    pic: "/img/art/abstract5.jpg",
-    name: "Art Piece 4",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$200"
-  },
-  {
-    id: 5,
-    pic: "/img/art/abstract6.jpg",
-    name: "Art Piece 5",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$550"
-  },
-  {
-    id: 6,
-    pic: "/img/art/abstract7.jpg",
-    name: "Art Piece 6",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
-    url: "#",
-    materials: "Oil on canvas",
-    price: "$120"
+      `Personal website designed and constructed for the artist Hanna Jennings.<br><br>
+      SASS is utilizing BEM methodology to optimize clean, readable, and reusable code.<br><br>
+      Dynamic content is being handled by the following APIs: Etsy, Instagram, & Medium. My duties included creation of wireframe, UI/UX design, content creation, building site according to wireframe, debugging, and deployment.`,
+    url: "http://hanna.huntingtondigitaloc.com",
+    price: "Javascript, HTML, SASS, NPM"
   }
 ];
 
-const buildArtCard = art => {
+const buildWorkCard = art => {
   const div = $("<div>");
   const name = $("<h3>");
   const a = $("<a>");
@@ -195,7 +156,13 @@ const buildArtCard = art => {
   const description = $("<p>");
   const materials = $("<p>");
   const price = $("<h3>");
-  const button = $("<button>Buy Now</button>");
+  const button = $("<a>Visit Site</a>");
+
+  button.attr({
+    class: "general-btn art__row__button",
+    href: art.url,
+    target: "_blank"
+  })
 
   const artRow = $(".art__row");
   artRow.append(div);
@@ -204,96 +171,42 @@ const buildArtCard = art => {
   price.append(art.price);
   materials.append(art.materials);
   div.append(img);
-  div.append(name, description, materials, price, button);
+  div.append(name, description, price, button);
 
   description.attr("class", "art__row__text");
   price.attr("class", "art__row__price");
-  button.attr("class", "general-btn art__row__button");
+
+  name.attr("class", "art__name");
 
   a.attr("href", art.url);
   img.attr({
     src: art.pic,
-    class: "art__row__image",
-    id: "modalActivate",
-    "data-toggle": "modal",
-    "data-target": "#exampleModalPreview"
+    class: "art__row__image"
   });
   div.attr("class", "art__row__container");
 };
 
-// data.forEach(art => buildArtCard(art));
+data.forEach(art => buildWorkCard(art));
 
-// Fetch Blog Posts from Medium
-const fetchBlogPosts = () => {
-  fetch(
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewly"
-  )
-    .then(res => res.json())
-    .then(data => {
-      // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
-      const res = data.items; //This is an array with the content. No feed, no info about author etc.
-      const posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
-      const postsSliced = posts.slice(0, 4);
-
-      // Functions to create a short text out of whole blog's content
-      function toText(node) {
-        let tag = document.createElement("div");
-        tag.innerHTML = node;
-        node = tag.innerText;
-        return node;
-      }
-      function shortenText(text, startingPoint, maxLength) {
-        return text.length > maxLength
-          ? text.slice(startingPoint, maxLength)
-          : text;
-      }
-
-      // Put things in right spots of markup
-      let output = "";
-      postsSliced.forEach(item => {
-        output += `
-           <li class="blog__post">
-              <a href="${item.link}" target="_blank">
-                 <img src="${item.thumbnail}" class="blog__topImg"></img>
-                 <div class="blog__content">
-                    <div class="blog_preview">
-                       <h3 class="blog__title">${item.title}</h3>
-                       <p class="blog__intro">${"..." +
-                         shortenText(toText(item.content), 40, 330) +
-                         "..."}</p>
-                    </div>
-                    <hr>
-                    <div class="blog__info">
-                       <span class="blog__date">${shortenText(
-                         item.pubDate,
-                         0,
-                         10
-                       )}</span>
-                    </div>
-                 </div>
-              <a/>
-           </li>`;
-      });
-      document.querySelector(".blog__slider").innerHTML = output;
-    });
-};
-
-function fadeInAnimation () {
-  let fadeImage = $('.photos__gray--container__photo');
+function fadeInAnimation() {
+  let fadeImage = $(".photos__gray--container__photo");
   let windowHeight = $(window).outerHeight();
   let windowTopPosition = $(window).scrollTop();
-  let windowBottomPosition = (windowTopPosition + windowHeight);
+  let windowBottomPosition = windowTopPosition + windowHeight;
 
-  $.each(fadeImage, function(){
-      var el = $(this);
-      var elHeight = el.outerHeight();
-      var elTopPosition = el.offset().top;
-      var elBottomPosition = (elTopPosition + elHeight);
+  $.each(fadeImage, function() {
+    var el = $(this);
+    var elHeight = el.outerHeight();
+    var elTopPosition = el.offset().top;
+    var elBottomPosition = elTopPosition + elHeight;
 
-      if ((elBottomPosition >= windowTopPosition) && (elTopPosition <= windowBottomPosition)){
-          el.addClass('o-fade')
-      } else {
-          el.removeClass('o-fade')
-      }
-  })
+    if (
+      elBottomPosition >= windowTopPosition &&
+      elTopPosition <= windowBottomPosition
+    ) {
+      el.addClass("o-fade");
+    } else {
+      el.removeClass("o-fade");
+    }
+  });
 }
