@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // background: url(/img/hero-background.jpg);
     background: url(/img/hero-abstract-bg.jpg);
     min-height: 100vh;
     color: $color-white;
@@ -26,6 +25,10 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 7vh;
+
+        @include respond(phone){
+            padding-bottom: 12vh;
+        }
     }
 
     &__title {
@@ -41,7 +44,7 @@
         -moz-osx-font-smoothing: grayscale;
 
         @include respond(phone){
-            font-size: 5.5rem;
+            font-size: 8rem;
         }
     }
 
