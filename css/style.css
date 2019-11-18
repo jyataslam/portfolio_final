@@ -436,7 +436,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/img/hero-abstract-bg.jpg);
+  background: url(/img/lightbulb.png);
   min-height: 100vh;
   color: #fff;
   background-attachment: scroll;
@@ -485,7 +485,7 @@ body {
     margin: 1.5rem auto 0;
     border-radius: 25px;
     padding: 8px 24px;
-    border: 2px solid #fff;
+    border: 2px solid #de2a45;
     background: transparent;
     color: #fff;
     letter-spacing: .08rem;
