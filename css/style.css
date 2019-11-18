@@ -456,6 +456,9 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 7vh; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__hero-container {
+        padding-bottom: 12vh; } }
   .hero__title {
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 400;
