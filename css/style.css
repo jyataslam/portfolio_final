@@ -160,7 +160,7 @@ body {
       box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); } }
   @media only screen and (max-width: 37.5em) {
     .navigation {
-      height: 50px; } }
+      display: none; } }
   .navigation__wrapper {
     display: flex;
     max-width: 1800px;
@@ -264,8 +264,8 @@ body {
       .navigation__social__icon:hover {
         fill: #de2a45; }
   .navigation__nav-scrolled {
-    background: #fff;
-    border-bottom: 0.5rem solid #111; }
+    background: #ffffffe8;
+    border-bottom: 0.2rem solid #111; }
     @media only screen and (max-width: 56.25em) {
       .navigation__nav-scrolled {
         border-bottom: none; } }
@@ -295,7 +295,14 @@ body {
       margin: 0 1rem 0 0;
       width: 50px;
       height: 50px;
-      top: 0; } }
+      position: fixed;
+      bottom: 2rem;
+      right: 1rem;
+      background: rgba(27, 27, 27, 0.897);
+      border-radius: 50%;
+      padding: 3.4rem;
+      top: initial;
+      border: 1px solid #00000054; } }
   .hamburger_btn {
     position: absolute;
     width: 80px;
@@ -330,8 +337,9 @@ body {
         height: 1px; } }
     @media only screen and (max-width: 37.5em) {
       .hamburger__span {
+        background: #fff;
         height: 1px;
-        width: 35px; } }
+        width: 30px; } }
     .hamburger__span:before {
       content: "";
       position: absolute;
@@ -354,17 +362,17 @@ body {
       animation-fill-mode: forwards;
       top: 59%; }
   .hamburger.on span:nth-child(1) {
-    background: white;
+    background: #fff;
     animation: span-first-on 0.5s ease-in-out;
     animation-fill-mode: forwards;
     top: 50%; }
   .hamburger.on span:nth-child(2) {
-    background: white;
+    background: #fff;
     animation: span-second-on 0.5s ease-in-out;
     animation-fill-mode: forwards;
     top: 50%; }
   .hamburger.on span:nth-child(3) {
-    background: white;
+    background: #fff;
     animation: span-third-on 0.5s ease-in-out;
     animation-fill-mode: forwards;
     top: 50%; }
@@ -380,6 +388,11 @@ body {
   padding: 50px 0;
   transform: translateX(100vw);
   transition: .5s; }
+  @media only screen and (max-width: 37.5em) {
+    .sidenav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
   .sidenav__list {
     list-style-type: none;
     color: rgba(39, 39, 39, 0.753);
@@ -390,6 +403,9 @@ body {
     color: white;
     font-size: 4rem;
     padding-bottom: .5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .sidenav__item {
+        font-size: 6rem; } }
   .sidenav__social {
     display: flex;
     flex-direction: row;
