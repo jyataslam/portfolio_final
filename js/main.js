@@ -17,6 +17,12 @@ $(document).ready(function() {
   $("#hamburger").click(handleNavAnimationClick);
 });
 
+$(window).on('load', function(){
+  this.setTimeout(function(){
+    $('.loading').fadeOut('slow')
+  }, 1000);
+})
+
 // Handle all scroll events
 $(document).scroll(function() {
   $(this).scrollTop() > 10
@@ -129,8 +135,7 @@ const data = [
     id: 2,
     pic: "/img/hd-site.png",
     name: "Huntington Digital, LLC",
-    description:
-      `Website carefully created and designed specifically for Huntington Digital, LLC.<br><br>
+    description: `Website carefully created and designed specifically for Huntington Digital, LLC.<br><br>
       Huntington Digital was built utilizing vanilla Javascript for the Front-End and PHP for the Back-End running on an Apache server. My duties included UI/UX design, implementation of existing wireframe to code, custom animations, and deployment.`,
     url: "https://www.huntingtondigitaloc.com",
     price: "Javascript, HTML, CSS, PHP"
@@ -139,8 +144,7 @@ const data = [
     id: 3,
     pic: "/img/hanna-site.png",
     name: "Hanna Jennings Art",
-    description:
-      `Personal website designed and constructed for the artist Hanna Jennings.<br><br>
+    description: `Personal website designed and constructed for the artist Hanna Jennings.<br><br>
       SASS is utilizing BEM methodology to optimize clean, readable, and reusable code.<br><br>
       Dynamic content is being handled by the following APIs: Etsy, Instagram, & Medium. My duties included creation of wireframe, UI/UX design, content creation, building site according to wireframe, debugging, and deployment.`,
     url: "http://hanna.huntingtondigitaloc.com",
@@ -162,7 +166,7 @@ const buildWorkCard = art => {
     class: "general-btn art__row__button",
     href: art.url,
     target: "_blank"
-  })
+  });
 
   const artRow = $(".art__row");
   artRow.append(div);
