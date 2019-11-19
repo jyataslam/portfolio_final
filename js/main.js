@@ -18,9 +18,7 @@ $(document).ready(function() {
 });
 
 $(window).on('load', function(){
-  this.setTimeout(function(){
-    $('.loading').fadeOut('slow')
-  }, 1000);
+  $('.loading').fadeOut('slow');
 })
 
 // Handle all scroll events
