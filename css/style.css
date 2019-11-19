@@ -91,7 +91,8 @@ html {
 body {
   box-sizing: border-box;
   padding: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #241e20; }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -456,7 +457,7 @@ body {
       min-height: 100vh;
       margin-top: 0;
       border: none;
-      background: url(/img/lightbulb-mobile.png);
+      background: url(/img/lightbulb-phone-optimized.png);
       background-size: cover; } }
   .hero__hero-container {
     display: flex;
