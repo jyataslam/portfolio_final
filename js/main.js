@@ -171,7 +171,7 @@ const buildWorkCard = art => {
   price.append(art.price);
   materials.append(art.materials);
   div.append(img);
-  div.append(name, description, price, button);
+  div.append(name, button, description, price);
 
   description.attr("class", "art__row__text");
   price.attr("class", "art__row__price");

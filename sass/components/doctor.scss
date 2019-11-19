@@ -1,6 +1,8 @@
 .about {
     padding: 8rem 0 5rem;
     position: relative;
+    background: $color-primary-background;
+    color: $color-white;
 
     @include respond(phone){
         padding: 7rem 0 1rem;
@@ -80,18 +82,19 @@
 
         @include respond(phone){
             flex-direction: column;
+            padding-bottom: 2rem;
         }
     }
 
     &__btn--more {
-        color: $color-black;
-        border: 2px solid $color-black;
+        color: $color-white;
+        border: 2px solid $color-primary-blue;
         margin: inherit;
 
         &:hover {
             cursor: pointer;
             color: $color-white;
-            background: $color-black;
+            background: $color-primary-blue;
         }
 
         @include respond(phone){

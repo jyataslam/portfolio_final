@@ -301,8 +301,7 @@ body {
       background: rgba(27, 27, 27, 0.897);
       border-radius: 50%;
       padding: 3.4rem;
-      top: initial;
-      border: 1px solid #00000054; } }
+      top: initial; } }
   .hamburger_btn {
     position: absolute;
     width: 80px;
@@ -443,15 +442,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+  @media only screen and (max-width: 75em) {
+    .hero {
+      background-position: left; } }
   @media only screen and (max-width: 56.25em) {
     .hero {
       margin-top: 7rem;
-      min-height: 94vh; } }
+      min-height: 94vh;
+      background-size: auto;
+      background-position-y: 42%; } }
   @media only screen and (max-width: 37.5em) {
     .hero {
       min-height: 100vh;
       margin-top: 0;
-      border: none; } }
+      border: none;
+      background: url(/img/lightbulb-mobile.png);
+      background-size: cover; } }
   .hero__hero-container {
     display: flex;
     flex-direction: column;
@@ -491,8 +497,8 @@ body {
     letter-spacing: .08rem;
     transition: all .5s ease; }
     .hero__button:hover {
-      background: #fff;
-      color: #111; }
+      background: #de2a45;
+      color: #fff; }
     .hero__button:active {
       outline: none; }
     .hero__button--store {
@@ -507,7 +513,9 @@ body {
 
 .about {
   padding: 8rem 0 5rem;
-  position: relative; }
+  position: relative;
+  background: #241e20;
+  color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .about {
       padding: 7rem 0 1rem; } }
@@ -543,7 +551,7 @@ body {
       .about__subheader {
         font-size: 2.4rem; } }
   .about__text {
-    color: #666666;
+    color: #d1d1d1;
     text-align: left;
     padding: 0 6rem 2rem; }
     @media only screen and (max-width: 56.25em) {
@@ -564,15 +572,16 @@ body {
         padding-bottom: 4rem; } }
     @media only screen and (max-width: 37.5em) {
       .about__btn-wrapper {
-        flex-direction: column; } }
+        flex-direction: column;
+        padding-bottom: 2rem; } }
   .about__btn--more {
-    color: #111;
-    border: 2px solid #111;
+    color: #fff;
+    border: 2px solid #de2a45;
     margin: inherit; }
     .about__btn--more:hover {
       cursor: pointer;
       color: #fff;
-      background: #111; }
+      background: #de2a45; }
     @media only screen and (max-width: 37.5em) {
       .about__btn--more {
         margin: 0 auto 1rem; } }
@@ -603,12 +612,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; }
+  position: relative;
+  background: #241e20;
+  color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .art {
       padding: 50px 0 0; } }
   .art__name {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-family: "Open Sans Condensed", sans-serif; }
   .art__button {
     margin-bottom: 5rem;
@@ -624,10 +635,10 @@ body {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 8rem;
-    color: #111; }
+    color: #fff; }
   .art__hr {
     padding-bottom: 3rem;
-    border-top: 4px solid #111; }
+    border-top: 4px solid #fff; }
   .art__subheader {
     font-family: inherit;
     font-weight: 400;
@@ -653,7 +664,8 @@ body {
           width: 50%; } }
       @media only screen and (max-width: 37.5em) {
         .art__row__container {
-          width: 100%; } }
+          width: 100%;
+          margin-bottom: 6rem; } }
     .art__row__image {
       width: 100%;
       object-fit: cover;
@@ -670,15 +682,18 @@ body {
       padding-top: 2rem; }
     .art__row__text {
       padding: 1rem 4rem;
-      color: #666666; }
+      color: #d1d1d1; }
     .art__row__button {
-      border: 2px solid #111;
-      color: #111;
-      background: #fff;
-      margin-bottom: 6rem; }
+      border: 2px solid #de2a45;
+      color: #fff;
+      background: transparent;
+      margin-bottom: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .art__row__button {
+          margin-bottom: 1rem;
+          margin-top: 1rem; } }
       .art__row__button:hover {
-        background: #111;
-        border: 2px solid #111;
+        background: #de2a45;
         text-decoration: none;
         color: #fff; }
 
@@ -924,14 +939,16 @@ Remove or comment-out the code block below to see how the browser will fall-back
       margin: 0; } } }
 
 .skills {
-  padding: 60px 0 80px; }
+  padding: 60px 0 80px;
+  background: #241e20;
+  color: #fff; }
   .skills__title {
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 8rem;
-    color: #111; }
+    color: #fff; }
   .skills__hr {
-    border-top: 4px solid #111; }
+    border-top: 4px solid #fff; }
   .skills__icon-container {
     display: flex;
     justify-content: center;
@@ -946,7 +963,8 @@ Remove or comment-out the code block below to see how the browser will fall-back
         width: 100px; }
       .skills__icon-container__icon__title {
         text-align: center;
-        padding-top: 1rem; }
+        padding-top: 1rem;
+        color: #d1d1d1; }
 
 .footer {
   background-color: #252525;
@@ -1051,14 +1069,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
     margin: 0 auto 1rem;
     text-align: center; }
   .contact__text {
-    color: #666666;
+    color: #d1d1d1;
     font-weight: 100;
     margin: 0 auto 2rem;
     text-align: center; }
   .contact__preference {
     margin: 0;
     font-size: 1.2rem;
-    color: #666666; }
+    color: #d1d1d1; }
     @media only screen and (max-width: 37.5em) {
       .contact__preference {
         font-size: 8px;
