@@ -329,6 +329,10 @@
         font-size: 4rem;
         padding-bottom: .5rem;
 
+        a {
+            color: $color-white;
+        }
+
         @include respond(phone){
             font-size: 6rem;
         }
