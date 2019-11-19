@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/img/hero-abstract-bg.jpg);
+    background: url(/img/lightbulb.png);
     min-height: 100vh;
     color: $color-white;
     background-attachment: scroll;
@@ -10,15 +10,23 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    @include respond(tab-land){
+        background-position: left;
+    }
+
     @include respond(tab-port){
         margin-top: 7rem;
         min-height: 94vh;
+        background-size: auto;
+        background-position-y: 42%;
     }
 
     @include respond(phone){
         min-height: 100vh;
         margin-top: 0;
         border: none;
+        background: url(/img/lightbulb-phone-optimized.png);
+        background-size: cover;
     }
 
     &__hero-container {
@@ -62,15 +70,15 @@
         margin: 1.5rem auto 0;
         border-radius: 25px;
         padding: 8px 24px;
-        border: 2px solid $color-white;
+        border: 2px solid $color-primary-blue;
         background: transparent;
         color: $color-white;
         letter-spacing: .08rem;
         transition: all .5s ease;
 
         &:hover {
-            background: $color-white;
-            color: $color-black;
+            background: $color-primary-blue;
+            color: $color-white;
         }
 
         &:active {

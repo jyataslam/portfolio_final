@@ -1,15 +1,17 @@
 .skills {
     padding: 60px 0 80px;
+    background: $color-primary-background;
+    color: $color-white;
 
     &__title {
         text-align: center;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 8rem;
-        color: $color-black;
+        color: $color-white;
     }
 
     &__hr {
-        border-top: 4px solid $color-black;
+        border-top: 4px solid $color-white;
     }
 
     &__icon-container {
@@ -32,6 +34,7 @@
             &__title {
                 text-align: center;
                 padding-top: 1rem;
+                color: $color-primary-text;
             }
         }
     }
