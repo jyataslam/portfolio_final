@@ -291,6 +291,9 @@ body {
     height: 6rem;
     margin-bottom: 0;
     padding: 1.2rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
     -webkit-filter: invert(100);
     filter: invert(100); }
     .navigation__logo:hover {
@@ -339,9 +342,10 @@ body {
     text-transform: uppercase;
     transition: all .2s ease-in-out;
     letter-spacing: .15rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 0;
-    line-height: 2.2; }
+    line-height: 2.7;
+    font-weight: 700; }
     .navigation__item:hover {
       text-decoration: none;
       color: #de2a45;
@@ -353,15 +357,14 @@ body {
     align-items: center;
     margin-right: 3rem; }
     .navigation__social__icon {
-      height: 2.5rem;
+      height: 2rem;
       padding: 0 1rem;
       fill: #fff;
       transition: all .5s; }
       .navigation__social__icon:hover {
         fill: #de2a45; }
   .navigation__nav-scrolled {
-    background: #ffffffe8;
-    border-bottom: 0.2rem solid #111; }
+    background: #ffffffe8; }
     @media only screen and (max-width: 56.25em) {
       .navigation__nav-scrolled {
         border-bottom: none; } }
@@ -394,10 +397,11 @@ body {
       position: fixed;
       bottom: 2rem;
       right: 1rem;
-      background: rgba(27, 27, 27, 0.897);
+      background: #de2a45;
       border-radius: 50%;
       padding: 3.4rem;
-      top: initial; } }
+      top: initial;
+      box-shadow: 1px 1px 15px rgba(18, 18, 18, 0.5); } }
   .hamburger_btn {
     position: absolute;
     width: 80px;
@@ -487,7 +491,7 @@ body {
     .sidenav {
       display: flex;
       flex-direction: column;
-      justify-content: center; } }
+      justify-content: flex-start; } }
   .sidenav__list {
     list-style-type: none;
     color: rgba(39, 39, 39, 0.753);
@@ -564,11 +568,11 @@ body {
       .hero__hero-container {
         padding-bottom: 12vh; } }
   .hero__title {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 400;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-weight: 600;
     color: #fff;
     text-align: center;
-    font-size: 11rem;
+    font-size: 8rem;
     padding-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -576,14 +580,18 @@ body {
     -moz-osx-font-smoothing: grayscale; }
     @media only screen and (max-width: 37.5em) {
       .hero__title {
-        font-size: 8rem; } }
+        font-size: 5rem; } }
   .hero__sub-title {
+    font-family: 'Ibarra Real Nova', sans-serif;
     color: #fff;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 0.13rem; }
+    @media only screen and (max-width: 37.5em) {
+      .hero__sub-title {
+        font-size: 1.4rem; } }
   .hero__button {
     font-size: 1.4rem;
     margin: 1.5rem auto 0;
@@ -633,14 +641,14 @@ body {
       .about__image {
         width: 100%; } }
   .about__header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 4rem;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-size: 3.5rem;
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
       .about__header {
         font-size: 4rem; } }
   .about__subheader {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Ibarra Real Nova', sans-serif;
     color: #de2a45;
     text-align: center;
     padding-bottom: 2rem;
@@ -649,15 +657,38 @@ body {
       .about__subheader {
         font-size: 2.4rem; } }
   .about__text {
-    color: #d1d1d1;
+    color: #a7a7a7;
     text-align: left;
-    padding: 0 6rem 2rem; }
+    padding: 0 6rem 4rem; }
     @media only screen and (max-width: 56.25em) {
       .about__text {
-        padding: 0 6rem 2rem; } }
+        padding: 0 6rem 3rem; } }
     @media only screen and (max-width: 37.5em) {
       .about__text {
-        padding: 0 0 1rem; } }
+        padding: 0 0 2.5rem; } }
+  .about__interests--header {
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .about__interests--header:after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      bottom: 5px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 40%;
+      background: #a7a7a7; }
+  .about__interests--text {
+    margin: 0 auto;
+    padding: .5rem 6rem 2rem;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-size: 1.8rem;
+    text-align: center; }
   .about__wrapper {
     display: flex;
     flex-direction: column;
@@ -706,7 +737,7 @@ body {
     z-index: -1; }
 
 .art {
-  padding: 70px 0 20px;
+  padding: 70px 0 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -717,8 +748,9 @@ body {
     .art {
       padding: 50px 0 0; } }
   .art__name {
-    font-size: 4.5rem;
-    font-family: "Open Sans Condensed", sans-serif; }
+    font-size: 3rem;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    padding-top: .5rem; }
   .art__button {
     margin-bottom: 5rem;
     background: #de2a45;
@@ -731,8 +763,8 @@ body {
       text-decoration: none; }
   .art__title {
     text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 8rem;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-size: 5rem;
     color: #fff; }
   .art__hr {
     padding-bottom: 3rem;
@@ -769,7 +801,9 @@ body {
       object-fit: cover;
       height: 41rem;
       padding-bottom: 2rem;
-      object-position: top; }
+      object-position: top;
+      -webkit-filter: contrast(0.9);
+      filter: contrast(0.9); }
     .art__row__price {
       font-size: 1.4rem;
       text-align: center;
@@ -780,7 +814,7 @@ body {
       padding-top: 2rem; }
     .art__row__text {
       padding: 1rem 4rem;
-      color: #d1d1d1; }
+      color: #a7a7a7; }
     .art__row__button {
       border: 2px solid #de2a45;
       color: #fff;
@@ -1042,8 +1076,8 @@ Remove or comment-out the code block below to see how the browser will fall-back
   color: #fff; }
   .skills__title {
     text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 8rem;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-size: 5rem;
     color: #fff; }
   .skills__hr {
     border-top: 4px solid #fff; }
@@ -1062,21 +1096,29 @@ Remove or comment-out the code block below to see how the browser will fall-back
       .skills__icon-container__icon__title {
         text-align: center;
         padding-top: 1rem;
-        color: #d1d1d1; }
+        color: #a7a7a7; }
 
 .footer {
-  background-color: #252525;
-  padding: 8rem 0 2rem;
+  background-color: #111;
+  padding: 8rem 0 4rem;
   color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      padding-top: 4rem; } }
   .footer__logo--container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    padding-bottom: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__logo--container {
+        padding-bottom: 0; } }
   .footer__logo {
     margin: 0 auto;
     text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 8rem;
+    font-family: 'Ibarra Real Nova', sans-serif;
+    font-size: 3rem;
+    color: #a7a7a7;
     transition: color .5s ease; }
     .footer__logo:hover {
       cursor: pointer;
@@ -1086,7 +1128,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
         height: 150px; } }
     @media only screen and (max-width: 37.5em) {
       .footer__logo {
-        height: 100px; } }
+        height: auto; } }
   .footer__tagline {
     text-align: center;
     font-style: italic; }
@@ -1100,7 +1142,9 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .footer__location--wrapper {
     display: flex;
     flex-direction: row;
-    padding-bottom: 3rem; }
+    padding-bottom: 1rem;
+    text-align: center;
+    justify-content: center; }
     .footer__location--wrapper:nth-child(3) {
       padding-bottom: 0; }
     @media only screen and (max-width: 37.5em) {
@@ -1118,6 +1162,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .footer__text {
     margin: auto 0 auto 2rem;
     color: #fff;
+    font-size: 1.2rem;
     transition: all .3s; }
     .footer__text:hover {
       text-decoration: none;
@@ -1128,64 +1173,17 @@ Remove or comment-out the code block below to see how the browser will fall-back
     align-content: center;
     padding-top: 5rem; }
   .footer__copyright--text {
-    color: #fff;
+    color: #a7a7a7;
     font-size: 1.2rem; }
 
 .contact {
-  padding: 80px 0; }
-  @media only screen and (max-width: 37.5em) {
-    .contact {
-      padding: 40px 0; } }
-  .contact .row {
-    display: flex;
-    flex-direction: column; }
-  .contact .form-group {
-    display: flex; }
-  .contact .form-control {
-    font-size: 1.2rem;
-    letter-spacing: .1rem; }
-  .contact .form-check {
-    font-size: 1.2rem; }
-    @media only screen and (max-width: 37.5em) {
-      .contact .form-check {
-        line-height: 2; } }
-    .contact .form-check-label {
-      margin-left: .5rem; }
-  .contact .form-check:nth-child(2) {
-    margin: 0 2rem;
-    font-size: 1.2rem; }
-    @media only screen and (max-width: 37.5em) {
-      .contact .form-check:nth-child(2) {
-        margin: 0 1rem;
-        line-height: 2; } }
-  .contact__hr {
-    padding-bottom: 3rem; }
+  padding: 18rem 0;
+  background: url(/img/contact-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Ibarra Real Nova', sans-serif;
+  color: #fff; }
   .contact__header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin: 0 auto 1rem;
-    text-align: center; }
-  .contact__text {
-    color: #d1d1d1;
-    font-weight: 100;
-    margin: 0 auto 2rem;
-    text-align: center; }
-  .contact__preference {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #d1d1d1; }
-    @media only screen and (max-width: 37.5em) {
-      .contact__preference {
-        font-size: 8px;
-        line-height: 2.4; } }
-  .contact__icon {
-    padding-right: 2rem;
-    font-size: 4rem; }
-  .contact__button {
-    color: #fff;
-    background: #de2a45;
-    border: 2px solid #de2a45; }
-    .contact__button:hover {
-      color: #de2a45;
-      background: #fff; }
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 3rem; }

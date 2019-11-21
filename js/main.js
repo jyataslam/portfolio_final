@@ -119,12 +119,12 @@ $(".contact-link").on("click", e => {
 const data = [
   {
     id: 1,
-    pic: "/img/ps-site.png",
+    pic: "/img/pocketstatz.png",
     name: "Pocket Statz",
-    description: `Pocket Statz is application that allows the user to quickly check the stats of their favorite NBA or NHL teams.<br><br>
+    description: `Pocket Statz is an application that allows you to quickly check the stats of your favorite NBA and NHL teams and save them to your account.<br><br>
 
-      Pocket Statz is built on a LAMP stack with a ReactJS Front-End. Redux is used in conjunction with ReactJS so that state can easily be shared and modified throughout multiple components of the application. React Router DOM was utilized to make Pocket Statz a single page application for a better user experience. Redux Forms is used so the users can create accounts and sign in while Materialize helped style the components.<br><br>
-      
+      Pocket Statz is built on a LAMP stack with a ReactJS Front-End. Redux is used in conjunction with ReactJS so that state can easily be shared and modified throughout multiple components of the application.
+
       The Back-End runs an Apache server and utilizes PHP to store and retrieve the user's team data to and from the MySQL database. PHP and MySQL is also handling validation and user authentication.`,
     url: "https://pocketstatz.com",
     price: "ReactJS, Redux, Javascript, HTML, SASS, PHP, MySQL"
@@ -142,7 +142,7 @@ const data = [
     id: 3,
     pic: "/img/hanna-site.png",
     name: "Hanna Jennings Art",
-    description: `Personal website designed and constructed for the artist Hanna Jennings.<br><br>
+    description: `Website designed and constructed for the artist Hanna Jennings.<br><br>
       SASS is utilizing BEM methodology to optimize clean, readable, and reusable code.<br><br>
       Dynamic content is being handled by the following APIs: Etsy, Instagram, & Medium. My duties included creation of wireframe, UI/UX design, content creation, building site according to wireframe, debugging, and deployment.`,
     url: "http://hanna.huntingtondigitaloc.com",

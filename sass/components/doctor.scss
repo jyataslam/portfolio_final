@@ -31,8 +31,9 @@
     }
     
     &__header {
-        font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 4rem;
+        // font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Ibarra Real Nova', sans-serif;
+        font-size: 3.5rem;
         text-align: center;
 
         @include respond(phone){
@@ -41,7 +42,8 @@
     }
 
     &__subheader {
-        font-family: 'Open Sans Condensed', sans-serif;
+        // font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Ibarra Real Nova', sans-serif;
         color: $color-primary-blue;
         text-align: center;
         padding-bottom: 2rem;
@@ -55,15 +57,44 @@
     &__text {
         color: $color-primary-text;
         text-align: left;
-        padding: 0 6rem 2rem;
+        padding: 0 6rem 4rem;
 
         @include respond(tab-port){
-            padding: 0 6rem 2rem;
+            padding: 0 6rem 3rem;
         }
 
         @include respond(phone){
-            padding: 0 0 1rem;
+            padding: 0 0 2.5rem;
         }
+    }
+
+    &__interests--header {
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        font-size: 1.4rem;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:after {
+            position: absolute;
+            content: '';
+            height: 2px;
+            bottom: 5px; 
+            margin: 0 auto;
+		    left: 0;
+            right: 0;
+		    width: 40%;
+		    background: $color-primary-text;
+        }
+    }
+
+    &__interests--text {
+        margin: 0 auto;
+        padding: .5rem 6rem 2rem;
+        font-family: 'Ibarra Real Nova', sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
     }
 
     &__wrapper {
