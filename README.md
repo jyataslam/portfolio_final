@@ -1,2 +1,2 @@
-# Custom Website Template 1
-Website Template 1 for Huntington Digital, LLC
+# Personal Portfolio Site for Jason Yata
+Website created by Jason Yata
