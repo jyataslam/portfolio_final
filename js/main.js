@@ -13,16 +13,16 @@ const parallax = $(".parallax");
 const modalBody = $(".modal-body");
 const modalTrigger = $("#exampleModalPreview");
 
-$(document).ready(function() {
+$(document).ready(function () {
   $("#hamburger").click(handleNavAnimationClick);
 });
 
-$(window).on('load', function(){
-  $('.loading').fadeOut('slow');
-})
+$(window).on("load", function () {
+  $(".loading").fadeOut("slow");
+});
 
 // Handle all scroll events
-$(document).scroll(function() {
+$(document).scroll(function () {
   $(this).scrollTop() > 10
     ? ($(desktopNav).addClass("navigation__nav-scrolled"),
       $(desktopLinks).addClass("navigation__links-scrolled"),
@@ -55,62 +55,62 @@ handleNavAnimationClick = () => {
   }
 };
 
-$.fn.scrollView = function() {
-  return this.each(function() {
+$.fn.scrollView = function () {
+  return this.each(function () {
     $("html, body").animate(
       {
-        scrollTop: $(this).offset().top
+        scrollTop: $(this).offset().top,
       },
       1000
     );
   });
 };
 
-$(".navigation__logo, .footer__logo").on("click", e => {
+$(".navigation__logo, .footer__logo").on("click", (e) => {
   e.preventDefault();
   $("#hero").scrollView();
 });
 
-$(".about-link-sidenav").on("click", e => {
+$(".about-link-sidenav").on("click", (e) => {
   e.preventDefault();
   handleNavAnimationClick();
   $("#about").scrollView();
 });
 
-$(".work-link-sidenav").on("click", e => {
+$(".work-link-sidenav").on("click", (e) => {
   e.preventDefault();
   handleNavAnimationClick();
   $(".art").scrollView();
 });
 
-$(".skills-link-sidenav").on("click", e => {
+$(".skills-link-sidenav").on("click", (e) => {
   e.preventDefault();
   handleNavAnimationClick();
   $(".skills").scrollView();
 });
 
-$(".contact-link-sidenav").on("click", e => {
+$(".contact-link-sidenav").on("click", (e) => {
   e.preventDefault();
   handleNavAnimationClick();
   $("#footer").scrollView();
 });
 
-$(".about-link").on("click", e => {
+$(".about-link").on("click", (e) => {
   e.preventDefault();
   $("#about").scrollView();
 });
 
-$(".work-link, .hero__button, .about__btn--more").on("click", e => {
+$(".work-link, .hero__button, .about__btn--more").on("click", (e) => {
   e.preventDefault();
   $(".art").scrollView();
 });
 
-$(".skills-link").on("click", e => {
+$(".skills-link").on("click", (e) => {
   e.preventDefault();
   $("#skills").scrollView();
 });
 
-$(".contact-link").on("click", e => {
+$(".contact-link").on("click", (e) => {
   e.preventDefault();
   $("#footer").scrollView();
 });
@@ -127,30 +127,30 @@ const data = [
 
       The Back-End runs an Apache server and utilizes PHP to store and retrieve the user's team data to and from the MySQL database. PHP and MySQL is also handling validation and user authentication.`,
     url: "https://pocketstatz.com",
-    price: "ReactJS, Redux, Javascript, HTML, SASS, PHP, MySQL"
+    price: "ReactJS, Redux, Javascript, HTML, SASS, PHP, MySQL",
   },
   {
     id: 2,
-    pic: "/img/hd-site.png",
+    pic: "/img/hd-screenshot.jpg",
     name: "Huntington Digital, LLC",
     description: `Website carefully created and designed specifically for Huntington Digital, LLC.<br><br>
       Huntington Digital was built utilizing vanilla Javascript for the Front-End and PHP for the Back-End running on an Apache server. My duties included UI/UX design, implementation of existing wireframe to code, custom animations, and deployment.`,
     url: "https://www.huntingtondigitaloc.com",
-    price: "Javascript, HTML, CSS, PHP"
+    price: "Javascript, HTML, CSS, PHP",
   },
   {
     id: 3,
-    pic: "/img/hanna-site.png",
-    name: "Hanna Jennings Art",
-    description: `Website designed and constructed for the artist Hanna Jennings.<br><br>
-      SASS is utilizing BEM methodology to optimize clean, readable, and reusable code.<br><br>
-      Dynamic content is being handled by the following APIs: Etsy, Instagram, & Medium. My duties included creation of wireframe, UI/UX design, content creation, building site according to wireframe, debugging, and deployment.`,
-    url: "http://hanna.huntingtondigitaloc.com",
-    price: "Javascript, HTML, SASS, NPM"
-  }
+    pic: "/img/travelwell-screenshot.jpg",
+    name: "TravelWell",
+    description: `TravelWell is a blog website featuring different tours around the world.<br><br>
+      TravelWell is built with a GatsbyJS Front-End and GraphQL Back-End.<br><br>
+      Tours and blogs content are being served by querying the Contentful database and dynamically creating each page via the Gatsby-Node API. CSS is written using Modules and Styled Components.`,
+    url: "https://travelwell-gatsby.netlify.app/",
+    price: "GatsbyJS, GraphQL, Node, CSS Modules, Contentful, Netlify",
+  },
 ];
 
-const buildWorkCard = art => {
+const buildWorkCard = (art) => {
   const div = $("<div>");
   const name = $("<h3>");
   const a = $("<a>");
@@ -163,7 +163,7 @@ const buildWorkCard = art => {
   button.attr({
     class: "general-btn art__row__button",
     href: art.url,
-    target: "_blank"
+    target: "_blank",
   });
 
   const artRow = $(".art__row");
@@ -183,12 +183,12 @@ const buildWorkCard = art => {
   a.attr("href", art.url);
   img.attr({
     src: art.pic,
-    class: "art__row__image"
+    class: "art__row__image",
   });
   div.attr("class", "art__row__container");
 };
 
-data.forEach(art => buildWorkCard(art));
+data.forEach((art) => buildWorkCard(art));
 
 function fadeInAnimation() {
   let fadeImage = $(".photos__gray--container__photo");
@@ -196,7 +196,7 @@ function fadeInAnimation() {
   let windowTopPosition = $(window).scrollTop();
   let windowBottomPosition = windowTopPosition + windowHeight;
 
-  $.each(fadeImage, function() {
+  $.each(fadeImage, function () {
     var el = $(this);
     var elHeight = el.outerHeight();
     var elTopPosition = el.offset().top;
